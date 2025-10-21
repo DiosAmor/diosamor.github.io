@@ -73,6 +73,21 @@ ninja.data = [{
           description: "2015 - 2022",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
+            },},{id: "projects-ieee-802-11be-triggered-txop-sharing-txs-mode-1-simulator",
+          title: 'IEEE 802.11be Triggered TXOP sharing (TXS) mode 1 Simulator',
+          description: "2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
+            },},{id: "projects-ieee-802-11bn-coordinated-tdma-co-tdma-simulator",
+          title: 'IEEE 802.11bn Coordinated TDMA (Co-TDMA) Simulator',
+          description: "2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_project/";
+            },},{id: "projects-ns-3-statistical-framework",
+          title: 'ns-3 Statistical Framework',
+          description: "2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
