@@ -27,13 +27,16 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am Senior Engineer at Newratek, Inc., Seoul, South Korea since 2023.
+Changmin Lee received the B.S. and Ph.D. degrees from the School of Integrated Technology, Yonsei University, South Korea, in 2015 and 2023, respectively. In 2018, he was a Visiting Researcher with Boğaziçi University, Istanbul, Turkey.
 
-I received the B.S. and Ph.D. degrees from the School of Integrated Technology, Yonsei University, Seoul, South Korea, in 2015 and 2023, respectively.
+Since 2023, he has been a Senior Engineer at Newratek, Inc., Seoul, South Korea, where he focuses on analyzing IEEE 802.11 standards (specifically 802.11be/bn) and designing architectural components for next-generation Wi-Fi protocols.
 
-I was the recipient of the IEEE INFOCOM Best Demo Award in 2015 and the IEEE WCNC Best Demo Award in 2020.
+He was a recipient of the IEEE INFOCOM Best Demo Award (2015) and the IEEE WCNC Best Demo Award (2020).
+
+<!-- Changmin Lee is a Senior Engineer at Newratek, Inc., focusing on IEEE 802.11be/bn standard analysis and Wi-Fi protocol design. He received his Ph.D. from Yonsei University in 2023. He was a visiting researcher at Boğaziçi University in 2018. He has received Best Demo Awards at IEEE INFOCOM (2015) and WCNC (2020). -->
 
 My research interests include:
 
-- Molecular communications
+- Prototyping
 - IEEE 802.11
+- Molecular communications
