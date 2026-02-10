@@ -23,7 +23,7 @@ related_publications: true
 
 <br>
 
-Develop MIMO testbed to enhance transmission speed of molecular communication.
+Developed MIMO testbed to enhance transmission speed of molecular communication.
 
 A testbed was developed to demonstrate the feasibility of molecular communication in a confined environment, such as a tube, where fluid flow is present. Since the system uses a change in pH to convey information, acids or bases are used as the information-carrying medium.
 

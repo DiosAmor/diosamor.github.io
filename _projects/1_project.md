@@ -24,7 +24,7 @@ related_publications: true
 
 <br>
 
-Develop MIMO testbed to enhance transmission speed of molecular communication.
+Developed MIMO testbed to enhance transmission speed of molecular communication.
 
 A testbed was developed that uses alcohol as an information-carrying medium. A nozzle, which acts as the transmitter, uses compressed air to spray alcohol, and an alcohol sensor, which serves as the receiver, transmits the change in ambient alcohol concentration to a computer via an <i>Arduino</i>. The testbed was designed with two nozzles to improve the communication speed.
 
@@ -60,7 +60,7 @@ A testbed was developed that uses alcohol as an information-carrying medium. A n
 
 <br>
 
-Develop MIMO testbed with fans and measure ILI of MIMO channel through MIMO testbed.
+Developed MIMO testbed with fans and measure ILI of MIMO channel through MIMO testbed.
 
 The testbed utilized two nozzles to enhance the communication speed. Additionally, a small fan was used to create fluid flow in the communication path to improve the performance of the communication system.
 
@@ -70,7 +70,7 @@ The testbed utilized two nozzles to enhance the communication speed. Additionall
 
 <br>
 
-Improve the data rate, a novel multiple-input multiple-output (MIMO) design for molecular communication.
+Improved the data rate, a novel multiple-input multiple-output (MIMO) design for molecular communication.
 
 This paper discusses the implementation of a Multiple-Input Multiple-Output (MIMO) system for molecular communication. I was responsible for writing the testbed section of the paper, in which I demonstrated how the theory is realized through a practical working example.
 
@@ -80,7 +80,7 @@ This paper discusses the implementation of a Multiple-Input Multiple-Output (MIM
 
 <br>
 
-Consider receiver (alcohol sensor) characteristics for the modeling channel model.
+Considered receiver (alcohol sensor) characteristics for the modeling channel model.
 
 When implementing molecular communication with a testbed, we use an alcohol sensor as a receiver. We have assumed that the relationship between the change in alcohol concentration and the change in the sensor's signal is linear, but in reality, there are discrepancies. This study aims to derive an accurate channel model by considering the characteristics of the sensor.
 
@@ -90,7 +90,7 @@ When implementing molecular communication with a testbed, we use an alcohol sens
 
 <br>
 
-Validate channel codes using the testbed.
+Validated channel codes using the testbed.
 
 In communication, there are often instances where signals that fail to arrive on time affect the current signal, causing interference. Channel coding techniques to reduce this Intersymbol Interference (ISI) are essential for practical application.
 
