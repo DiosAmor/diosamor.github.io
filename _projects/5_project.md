@@ -44,12 +44,12 @@ Implemented the coordinated TDMA (Co-TDMA) feature of IEEE 802.11bn and analyzed
 
 <br>
 
-<h3><b>📜 Deep Reinforcement Learning Based Coordinated TDMA for IEEE 802.11bn {% cite Lee2026 %} (2026)</b></h3>
+<h3><b>📜 Deep Reinforcement Learning Based Coordinated TDMA for IEEE 802.11bn (Wi-Fi 8)</b></h3>
 
 <br>
 
 Implemented deep reinforcement learning (DRL) based coordinated TDMA (Co-TDMA) for IEEE 802.11bn with <a href="https://www.nsnam.org">ns-3 simulator</a>.
 
-Utilize SHapley Additive exPlanations (SHAP) to provide interpretability for the AI-driven decisions, offering clear insights into how network information influences scheduling.
+We used SHAP to examine which network conditions influenced the scheduler's decisions. This work was accepted for IEEE CCNC 2027. {% cite Lee2026 %}
 
 <br>

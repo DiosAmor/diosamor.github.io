@@ -5,7 +5,7 @@ permalink: /projects/
 description:
 nav: true
 nav_order: 2
-display_categories: [molecular communication, RF communication, software development]
+display_categories: [RF communication, molecular communication, software development]
 horizontal: false
 ---
 

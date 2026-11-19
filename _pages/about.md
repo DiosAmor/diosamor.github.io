@@ -2,7 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Newratek, Inc.</a>. Seoul, South Korea
+degree: Ph.D.
+subtitle: Research Associate · Yonsei University
 
 profile:
   align: right
@@ -27,16 +28,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Changmin Lee received the B.S. and Ph.D. degrees from the School of Integrated Technology, Yonsei University, South Korea, in 2015 and 2023, respectively. In 2018, he was a Visiting Researcher with Boğaziçi University, Istanbul, Turkey.
+Changmin Lee is a Research Associate at Yonsei University, where he has worked with the [Robotic and Mobile Networks Laboratory (RAMO)](https://www.ramoyonsei.com/) and the [Intelligence Networking Lab](https://cbchae.yonsei.ac.kr/) since April 2026. He uses the [Yonsei Private 5G & AI-RAN Testbed]({{ '/projects/yonsei-private-5g/' | relative_url }}) to study how the path through a 5G network affects response times for AI applications.
 
-Since 2023, he has been a Senior Engineer at Newratek, Inc., Seoul, South Korea, where he focuses on analyzing IEEE 802.11 standards (specifically 802.11be/bn) and designing architectural components for next-generation Wi-Fi protocols.
+From 2023 to 2026, he was a Senior Engineer at Newratek, Inc., Seoul, South Korea, where he analyzed IEEE 802.11 standards (specifically 802.11be/bn) and designed architectural components for next-generation Wi-Fi protocols.
+
+He received the B.S. and Ph.D. degrees from the School of Integrated Technology, Yonsei University, South Korea, in 2015 and 2023, respectively. In 2018, he was a Visiting Researcher with Boğaziçi University, Istanbul, Turkey.
 
 He was a recipient of the IEEE INFOCOM Best Demo Award (2015) and the IEEE WCNC Best Demo Award (2020).
-
-<!-- Changmin Lee is a Senior Engineer at Newratek, Inc., focusing on IEEE 802.11be/bn standard analysis and Wi-Fi protocol design. He received his Ph.D. from Yonsei University in 2023. He was a visiting researcher at Boğaziçi University in 2018. He has received Best Demo Awards at IEEE INFOCOM (2015) and WCNC (2020). -->
-
-My research interests include:
-
-- Prototyping
-- IEEE 802.11
-- Molecular communications

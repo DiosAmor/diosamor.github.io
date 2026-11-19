@@ -56,6 +56,10 @@ table.table a {
   }
 }
 
+.news .news-photo {
+  max-width: 24rem;
+}
+
 blockquote {
   background: var(--global-bg-color);
   border-left: 5px solid var(--global-theme-color);
@@ -767,6 +771,28 @@ footer.sticky-bottom {
       }
 
       .author {
+        .author-note {
+          display: inline;
+
+          summary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+            cursor: pointer;
+
+            &::-webkit-details-marker {
+              display: none;
+            }
+
+            &:focus-visible {
+              outline: 2px solid var(--global-theme-color);
+              outline-offset: 2px;
+            }
+          }
+        }
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -1305,7 +1331,7 @@ ninja-keys::part(ninja-input-wrapper) {
   }
 }
 
-// popover is used for annotation in bib.liquid
+// Bootstrap popovers
 .popover {
   background-color: var(--global-bg-color);
   border-color: var(--global-divider-color);

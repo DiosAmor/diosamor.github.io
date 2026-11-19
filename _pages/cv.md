@@ -4,7 +4,8 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 4
+cv_pdf: /assets/pdf/CV_changminlee_261119.pdf
 ---
 
-<meta http-equiv="refresh" content="0; url=/assets/pdf/CV_changminlee_260127.pdf" />
-If you are not redirected automatically, <a href="/assets/pdf/CV_changminlee_260127.pdf">download my CV here</a>.
+<meta http-equiv="refresh" content="0; url={{ page.cv_pdf | relative_url }}" />
+<a href="{{ page.cv_pdf | relative_url }}">Download my curriculum vitae (PDF)</a>.

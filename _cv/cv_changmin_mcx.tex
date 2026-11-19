@@ -1,0 +1,205 @@
+% Document class and font size
+\documentclass[a4paper,9pt]{extarticle}
+
+% Packages
+\usepackage[utf8]{inputenc} % For input encoding
+\usepackage{geometry} % For page margins
+\geometry{a4paper, margin=0.75in} % Set paper size and margins
+\usepackage{titlesec} % For section title formatting
+\usepackage{enumitem} % For itemized list formatting
+\usepackage{hyperref} % For hyperlinks
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\setlist[enumerate]{itemsep=0.3em, left=0pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Changmin Lee CV},
+}
+
+% Formatting
+\setlist{noitemsep} % Removes item separation
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule] % Section title format
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip} % Section title spacing
+
+% Begin document
+\begin{document}
+
+% Disable page numbers
+\pagestyle{empty}
+
+% Header
+\begin{center}
+\textbf{\Large Changmin Lee}\\[8pt] % Name
+cm.lee@yonsei.ac.kr $|$ \href{https://diosamor.github.io}{diosamor.github.io} $|$ \href{https://scholar.google.com/citations?user=7nGSgqoAAAAJ&hl=en}{Google Scholar} \\
+(Last update: November 19th, 2026)
+\end{center}
+
+% \section*{SUMMARY}
+% \noindent
+
+\section*{RESEARCH INTERESTS}
+\noindent
+\begin{itemize}[leftmargin=1.5em, itemsep=0.3em]
+    \item \textbf{AI-RAN and Private 5G Testbeds}
+    \item \textbf{IEEE 802.11}
+    \item \textbf{Molecular Communications and Experimental Prototyping}
+\end{itemize}
+
+% Skills Section
+\section*{SKILLS}
+\begin{itemize}
+    \item \textbf{RAN Platforms \& Network Simulation:} OCUDU, OpenAirInterface (OAI), NVIDIA Aerial, ns-3
+    \item \textbf{Programming:} Python, C/C++
+    \item \textbf{Machine Learning \& MLOps:} PyTorch, MLflow, Kubeflow
+    \item \textbf{Languages:} Korean (Native), English (Fluent)
+\end{itemize}
+
+% Experience Section
+\section*{EXPERIENCES}
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{3.5cm} X @{}}
+    Apr. 2026 -- present    & \textbf{Yonsei University}, Research Associate \\
+                            & \textit{Research AI-RAN using OCUDU, OAI, and NVIDIA Aerial on a private 5G testbed.} \\ \addlinespace[0.5em]
+
+    Mar. 2023 -- Apr. 2026  & \textbf{Newratek}, Senior Engineer \\
+                            & \textit{Analyzed IEEE 802.11be/bn standards and evaluated Wi-Fi medium access protocols in ns-3.} \\ \addlinespace[0.5em]
+    
+    Aug. 2018 -- Aug. 2018 & \textbf{Boğaziçi University}, Visiting Researcher \\
+                            & \textit{Provide technical support for a molecular communication testbed. } \\
+                            & \textit{Co-authored a research paper as a result of successful international collaboration.} \\
+\end{tabularx}
+
+\section*{EDUCATION}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} ll r}
+    % 첫 번째 행: 날짜 / 학교명 / 위치
+    Mar. 2015 -- Feb. 2023 & \textbf{Yonsei University} & Seoul, Korea \\
+    & \textit{Ph.D., School of Integrated Technology, College of Engineering} & \\
+    & (Advisor: Prof. Chan-Byoung Chae) & \\[0.5em] % 행 간격 조절
+    
+    % 두 번째 행: 날짜 / 학교명 / 위치
+    Mar. 2012 -- Feb. 2015 & \textbf{Yonsei University} & Seoul, Korea \\
+    & \textit{B.S., School of Integrated Technology, College of Engineering} & \\
+\end{tabular*}
+
+% Projects Section
+\section*{PROJECTS}
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{2cm} X @{}}
+    2026 --     & \textbf{Yonsei Private 5G \& AI-RAN Testbed} \\
+                & \textit{Integrated indoor and outdoor radio units into the campus private 5G network and tested over-the-air connectivity with commercial 5G devices.} \\
+                & \textit{Use OCUDU and OAI for AI-RAN experiments and NVIDIA Aerial for GPU-based PHY processing.} \\ \addlinespace[0.5em]
+
+    2026        & \textbf{Kubeflow for TinyML} \\
+                & \textit{Migrated the simulation framework to Kubernetes to support neural processing unit (NPU) design.} \\
+                & \textit{Built Kubeflow pipelines to develop and deploy optimized TinyML models.} \\ \addlinespace[0.5em]
+                
+    2023 -- 2026 & \textbf{Wi-Fi MAC Simulation and Experiment Framework in ns-3} \\
+                & \textit{Implemented IEEE 802.11be triggered TXOP sharing and IEEE 802.11bn coordinated TDMA. Evaluated coordinated TDMA with real-time traffic.} \\
+                & \textit{Used Docker to run parallel simulations, Airflow and Django to automate experiments, and MongoDB to store results. Integrated MLflow to track parameters, metrics, and models for reinforcement learning experiments.} \\ \addlinespace[0.5em]
+    
+    2025        & \textbf{Google Cloud AI Study Jam} \\
+                &  \textit{Completed advanced tracks in machine learning and data analytics using Google Cloud Platform (GCP).} \\
+                & \textit{Implemented hands-on projects involving Vertex AI, BigQuery ML, and scalable AI infrastructure.} \\ \addlinespace[0.5em]
+    
+    2022        & \textbf{Google Machine Learning Bootcamp} \\
+                &  \textit{Completed a program focusing on deep learning theory and practical implementation using TensorFlow.} \\ \addlinespace[0.5em]
+    
+\end{tabularx}
+
+\newpage
+\section*{PROJECTS (CONTINUED)}
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{2cm} X @{}}
+    2020 -- 2022 & \textbf{Prototype for In-Vessel Molecular Communication} \\
+                &  \textit{Developed a fluidic communication system using pump-based transmitters and pH sensors.} \\
+                &  \textit{Implemented real-time signal detection and interfacing using Arduino in pipe-flow environments.} \\ \addlinespace[0.5em]
+                
+    2014 -- 2020 & \textbf{Prototype for Free-Space Molecular Communication} \\
+                &  \textit{Developed an over-the-air testbed utilizing spray-based transmitters and alcohol sensors.} \\
+                &  \textit{Implemented real-time signal detection and interfacing using Arduino in free-space environments.} \\ \addlinespace[0.5em]
+\end{tabularx}
+
+% Service Section
+\section*{PROFESSIONAL SERVICE}
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{2cm} X @{}}
+    2027 & \textbf{Technical Program Committee, IEEE ICC 2027} \\
+         & \textit{Molecular, Biological, and Multi-Scale Communications (MBMC) track.} \\ \addlinespace[0.5em]
+
+    2026 & \textbf{Technical Program Committee, IEEE ICC 2026} \\
+         & \textit{Molecular, Biological, and Multi-Scale Communications (MBMC) track.} \\ \addlinespace[0.5em]
+
+    Nov. 2025 & \textbf{Guest Editor, IEEE TMBMC} \\
+              &  \textit{Special issue: Cross-Disciplinary Molecular and Biological Communications: From Nanoscale Mechanisms to Intelligent Multi-Scale Networks} \\ \addlinespace[0.5em]
+    
+\end{tabularx}
+
+% Awards Section
+\section*{AWARDS AND HONORS}
+\noindent
+\begin{tabularx}{\textwidth}{@{} p{2cm} X @{}}
+    May 2020 & \textbf{Best Demo Award, IEEE WCNC 2020} \\
+              & \textit{Title: In-Vessel Molecular MIMO Communications} \\ \addlinespace[0.5em]
+    
+    Feb. 2020 & \textbf{Bronze Prize, 26th Samsung Humantech Paper Contest} \\
+              & \textit{Title: ISI-Minimizing Channel Codes for Molecular Communication via Diffusion: From Theory to Prototype} \\ \addlinespace[0.5em]
+
+    May 2019 & \textbf{Host Data Bakeoff Competition, IEEE CTW 2019} \\
+              & \textit{Title: Molecular MIMO Competition} \\ \addlinespace[0.5em]
+    
+    May 2015 & \textbf{Best Demo Award, IEEE INFOCOM 2015} \\
+              & \textit{Title: Molecular MIMO Communication Link} \\ \addlinespace[0.5em]
+    
+    Mar. 2015 & \textbf{Graduate Fellowship} \\
+              & \textit{ICT Consilience Creative Program, Ministry of Science and ICT, South Korea} \\ \addlinespace[0.5em]
+              
+    Mar. 2012 & \textbf{Undergraduate Fellowship} \\
+              & \textit{ICT Consilience Creative Program, Ministry of Science and ICT, South Korea} \\
+\end{tabularx}
+
+
+% Selected Publication Section
+\section*{SELECTED PUBLICATIONS}
+\begin{enumerate}
+    \item S. Lee\textsuperscript{\dag}, \textbf{C. Lee}\textsuperscript{\dag}, S.-C. Noh, and J. Lee, ``Deep Reinforcement Learning Based Coordinated TDMA for IEEE 802.11bn (Wi-Fi 8),'' in \textit{Proc. IEEE Consumer Commun. Netw. Conf. (CCNC)}, 2027 (accepted).
+    \item S. Lee, \textbf{C. Lee}, S.-C. Noh, and J. Lee, ``Performance Analysis of IEEE 802.11bn with Coordinated TDMA on Real-Time Applications,'' in \textit{Proc. IEEE Glob. Commun. Conf. (GLOBECOM)}, pp. 5205--5210, Dec. 2025.
+    \item \textbf{C. Lee}, B.-H. Koo, C.-B. Chae, and R. Schober, ``The Internet of Bio-Nano Things in Blood Vessels: System Design and Prototypes,'' \textit{J. Commun. Netw.}, vol. 25, no. 2, pp. 222--231, Apr. 2023.
+    \item \textbf{C. Lee}, B.-H. Koo, and C.-B. Chae, ``Demo: In-Vessel Molecular MIMO Communications,'' in \textit{Proc. IEEE Wireless Commun. Netw. Conf. Workshops (WCNCW)}, 2020.
+    \item \textbf{C. Lee}, H. B. Yilmaz, C.-B. Chae, N. Farsad, and A. Goldsmith, ``Machine Learning based Channel Modeling for Molecular MIMO Communications,'' in \textit{Proc. IEEE Int. Workshop Signal Process. Adv. Wireless Commun. (SPAWC)}, 2017.
+    \item \textbf{C. Lee}, B.-H. Koo, N.-R. Kim, H. B. Yilmaz, N. Farsad, A. W. Eckford, and C.-B. Chae, ``Molecular MIMO Communication Link,'' in \textit{Proc. IEEE Int. Conf. Comput. Commun. Workshops (INFOCOM WKSHPS)}, 2015.
+\end{enumerate}
+
+
+% Publication Section
+\newpage
+\section*{PUBLICATIONS}
+\noindent{\small \textsuperscript{\dag} Equal contribution.}\par
+\begin{enumerate}
+    \item S. Lee\textsuperscript{\dag}, \textbf{C. Lee}\textsuperscript{\dag}, S.-C. Noh, and J. Lee, ``Deep Reinforcement Learning Based Coordinated TDMA for IEEE 802.11bn (Wi-Fi 8),'' in \textit{Proc. IEEE Consumer Commun. Netw. Conf. (CCNC)}, 2027 (accepted).
+    \item S. Lee, \textbf{C. Lee}, S.-C. Noh, and J. Lee, ``Performance Analysis of IEEE 802.11bn with Coordinated TDMA on Real-Time Applications,'' in \textit{Proc. IEEE Glob. Commun. Conf. (GLOBECOM)}, pp. 5205--5210, Dec. 2025.
+    \item Y.-F. Lo\textsuperscript{\dag}, \textbf{C. Lee}\textsuperscript{\dag}, and C.-B. Chae, ``Three-Dimensional Channel Modeling for Molecular Communications in Tubular Environments with Heterogeneous Boundary Conditions,'' \textit{Submitted}.
+    \item P. Hofmann, P. Zhou, \textbf{C. Lee}, M. Reisslein, F. H. P. Fitzek, and C.-B. Chae, ``OpenFOAM Simulation of Microfluidic Molecular Communications: Method and Experimental Validation,'' \textit{IEEE Access}, vol. 12, pp. 109494--109512, 2024.
+    \item H. Hyun, \textbf{C. Lee}, M. Wen, S.-H. Kim, and C.-B. Chae, ``ISI-Mitigating Character Encoding for Molecular Communications via Diffusion,'' \textit{IEEE Wireless Commun. Lett.}, vol. 13, no. 1, pp. 24--28, Jan. 2024.
+    \item \textbf{C. Lee}, B.-H. Koo, C.-B. Chae, and R. Schober, ``The Internet of Bio-Nano Things in Blood Vessels: System Design and Prototypes,'' \textit{J. Commun. Netw.}, vol. 25, no. 2, pp. 222--231, Apr. 2023.
+    \item B.-H. Koo, \textbf{C. Lee}, A. E. Pusane, T. Tugcu, and C.-B. Chae, ``MIMO Operations in Molecular Communications: Theory, Prototypes, and Open Challenges,'' \textit{IEEE Commun. Mag.}, vol. 59, no. 9, pp. 98--104, Sept. 2021.
+    \item \textbf{C. Lee}, B.-H. Koo, and C.-B. Chae, ``Demo: In-Vessel Molecular MIMO Communications,'' in \textit{Proc. IEEE Wireless Commun. Netw. Conf. Workshops (WCNCW)}, 2020.
+    \item A. O. Kislal, B. C. Akdeniz, \textbf{C. Lee}, A. E. Pusane, T. Tugcu, and C.-B. Chae, ``ISI-Mitigating Channel Codes for Molecular Communication Via Diffusion,'' \textit{IEEE Access}, vol. 8, pp. 24588--24599, 2020.
+    \item \textbf{C. Lee}, B.-H. Koo, and C.-B. Chae, ``Molecular MIMO Communications Platform with BTSK for In-Vessel Network Systems,'' in \textit{Proc. EAI Int. Conf. Bio-insp. Inform. Commun. Technol.}, 2020.
+    \item Y. Huang, M. Wen, \textbf{C. Lee}, C.-B. Chae, and F. Ji, ``A Two-Way Molecular Communication Assisted by an Impulsive Force,'' \textit{IEEE Trans. Ind. Informat.}, vol. 15, no. 5, pp. 3048--3057, May 2019.
+	\item N.-R. Kim, N. Farsad, \textbf{C. Lee}, A. W. Eckford, and C.-B. Chae, ``An Experimentally Validated Channel Model for Molecular Communication Systems,'' \textit{IEEE Access}, vol. 7, pp. 81849--81858, 2019.
+    \item \textbf{C. Lee}, H. B. Yilmaz, C.-B. Chae, N. Farsad, and A. Goldsmith, ``Machine Learning based Channel Modeling for Molecular MIMO Communications,'' in \textit{Proc. IEEE Int. Workshop Signal Process. Adv. Wireless Commun. (SPAWC)}, 2017.
+    \item H. B. Yilmaz, \textbf{C. Lee}, Y. J. Cho, and C.-B. Chae, ``A Machine Learning Approach to Model the Received Signal in Molecular Communications,'' in \textit{Proc. IEEE Int. Black Sea Conf. Commun. and Netw. (BlackSeaCom)}, 2017.
+    \item B.-H. Koo, \textbf{C. Lee}, H. B. Yilmaz, N. Farsad, A. Eckford, and C.-B. Chae, ``Molecular MIMO: From Theory to Prototype,'' \textit{IEEE J. Sel. Areas Commun.}, vol. 34, no. 3, pp. 600--614, Mar. 2016.
+    \item \textbf{C. Lee}, B.-H. Koo, N.-R. Kim, H. B. Yilmaz, N. Farsad, A. W. Eckford, and C.-B. Chae, ``Demo: Molecular MIMO with Drift,'' in \textit{Proc. ACM MobiCom}, 2015.
+    \item \textbf{C. Lee}, B.-H. Koo, N.-R. Kim, H. B. Yilmaz, N. Farsad, A. W. Eckford, and C.-B. Chae, ``Molecular MIMO Communication Link,'' in \textit{Proc. IEEE Int. Conf. Comput. Commun. Workshops (INFOCOM WKSHPS)}, 2015.
+\end{enumerate}
+
+
+% End document
+\end{document}

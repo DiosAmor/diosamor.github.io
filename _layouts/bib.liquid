@@ -1,5 +1,6 @@
 ---
 ---
+{% assign note_shown_as_badge = false %}
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
@@ -34,22 +35,21 @@
         {% else %}
           <abbr class="badge">{{ entry.abbr }}</abbr>
         {% endif %}
-        {% if entry.note %}
-          {% if site.data.venues[entry.note] %}
-            {% assign venue_style = null %}
-            {% if site.data.venues[entry.note].color != blank %}
-              {% assign venue_style = site.data.venues[entry.note].color | prepend: 'style="background-color:' | append: '"' %}
+        {% assign note_badge = site.data.venues[entry.note] %}
+        {% if note_badge %}
+          {% assign note_shown_as_badge = true %}
+          <abbr
+            class="badge"
+            {% if note_badge.color %}
+              style="background-color:{{ note_badge.color }}"
             {% endif %}
-            <abbr
-              class="badge"
-              {% if venue_style %}
-                {{ venue_style }}
-              {% endif %}
-              ><a href="{{site.data.venues[entry.note].url}}">{{ entry.note }}</a></abbr
-            >
-          {% else %}
-            <abbr class="badge">{{ entry.note }}</abbr>
+          >
+          {%- if note_badge.url -%}
+            <a href="{{ note_badge.url }}">{{ entry.note }}</a>
+          {%- else -%}
+            {{ entry.note }}
           {% endif %}
+          </abbr>
         {% endif %}
       {% endif %}
     </div>
@@ -147,14 +147,12 @@
         </span>
       {% endif %}
       {% if entry.annotation %}
-        <i
-          class="fa-solid fa-circle-info ml-1"
-          data-toggle="popover"
-          data-placement="top"
-          data-html="true"
-          data-content="{{ entry.annotation | escape }}"
-        >
-        </i>
+        <details class="author-note">
+          <summary aria-label="Author contributions" title="{{ entry.annotation | strip_html | escape }}">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          </summary>
+          <span>{{ entry.annotation | escape }}</span>
+        </details>
       {% endif %}
     </div>
 
@@ -170,13 +168,7 @@
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
-    {% if entry.month %}
-      {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
-    {% endif %}
-    {% if entry.year %}
-      {% capture entryyear %}{{ " " }}{{ entry.year }}{% endcapture %}
-    {% endif %}
-    {% if entry.location %}
+    {% if entry.location and entry.type != 'inproceedings' and entry.type != 'conference' and entry.type != 'proceedings' %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
     {% endif -%}
     {% if entry.additional_info %}
@@ -187,13 +179,14 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    {% assign entry_date = entry.month | capitalize | append: ' ' | append: entry.year | strip %}
+    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entry_date != "" %}, {% endif %}{{ entry_date }}{% endcapture %}
     <div class="periodical">
       {{ periodical | strip }}
     </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
-    </div>
+    {% if entry.note and note_shown_as_badge == false %}
+      <div class="periodical">{{ entry.note | strip }}</div>
+    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
@@ -271,7 +264,17 @@
       {% endif %}
 
       {% assign entry_has_dimensions_badge = false %}
-      {% if entry.dimensions and entry.dimensions != 'false' %}
+      {% assign dimensions_identifier = entry.dimensions | default: '' %}
+      {% assign dimensions_attribute = 'id' %}
+      {% if dimensions_identifier == 'true' %}
+        {% assign dimensions_identifier = entry.doi | default: entry.pmid | default: '' %}
+        {% if dimensions_identifier == entry.doi %}
+          {% assign dimensions_attribute = 'doi' %}
+        {% else %}
+          {% assign dimensions_attribute = 'pmid' %}
+        {% endif %}
+      {% endif %}
+      {% if dimensions_identifier != '' and dimensions_identifier != 'false' %}
         {% assign entry_has_dimensions_badge = true %}
       {% endif %}
 
@@ -309,13 +312,7 @@
           {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
             <span
               class="__dimensions_badge_embed__"
-              {% if entry.dimensions != blank and entry.dimensions != 'true' %}
-                data-id="{{ entry.dimensions }}"
-              {% elsif entry.doi %}
-                data-doi="{{ entry.doi }}"
-              {% else %}
-                data-pmid="{{ entry.pmid }}"
-              {% endif %}
+              data-{{ dimensions_attribute }}="{{ dimensions_identifier | escape }}"
               data-style="small_rectangle"
               data-legend="hover-right"
               style="margin-bottom: 3px;"

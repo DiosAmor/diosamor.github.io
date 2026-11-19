@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Invited to serve on the Technical Program Committee for the <i>IEEE ICC 2026</i> MBMC (Molecular, Biological, and Multi-Scale Communications) track.
+Invited to serve on the Technical Program Committee for the Molecular, Biological, and Multi-Scale Communications (MBMC) track at *IEEE ICC 2026*.
