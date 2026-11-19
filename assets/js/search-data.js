@@ -50,11 +50,23 @@ ninja.data = [{
           section: "News",},{id: "news-honored-to-receive-the-best-demo-award-at-the-ieee-wcnc-2020",
           title: 'Honored to receive the Best Demo Award at the IEEE WCNC 2020.',
           description: "",
-          section: "News",},{id: "news-invited-to-serve-on-the-technical-program-committee-for-the-ieee-icc-2026-mbmc-molecular-biological-and-multi-scale-communications-track",
-          title: 'Invited to serve on the Technical Program Committee for the IEEE ICC 2026...',
+          section: "News",},{id: "news-invited-to-serve-on-the-technical-program-committee-for-the-molecular-biological-and-multi-scale-communications-mbmc-track-at-ieee-icc-2026",
+          title: 'Invited to serve on the Technical Program Committee for the Molecular, Biological, and...',
           description: "",
           section: "News",},{id: "news-invited-to-serve-as-a-guest-editor-for-the-special-issue-on-cross-disciplinary-molecular-and-biological-communications-from-nanoscale-mechanisms-to-intelligent-multi-scale-networks-in-ieee-transactions-on-molecular-biological-and-multi-scale-communications-tmbmc",
           title: 'Invited to serve as a Guest Editor for the Special Issue on Cross-Disciplinary...',
+          description: "",
+          section: "News",},{id: "news-joined-yonsei-university-as-a-research-associate-to-develop-private-5g-testbeds-for-ai-ran-research",
+          title: 'Joined Yonsei University as a Research Associate to develop private 5G testbeds for...',
+          description: "",
+          section: "News",},{id: "news-yonsei-university-and-lg-uplus-demonstrated-that-an-industrial-device-could-stay-connected-as-it-moved-between-yonsei-s-private-5g-testbed-and-lg-uplus-s-commercial-network-lg-uplus-announcement",
+          title: 'Yonsei University and LG Uplus demonstrated that an industrial device could stay connected...',
+          description: "",
+          section: "News",},{id: "news-the-nvidia-aerial-testbed-community-showcase-featured-yonsei-university-s-gpu-accelerated-private-5g-testbed-which-the-ramo-lab-used-to-stream-video-to-an-iphone",
+          title: 'The NVIDIA Aerial Testbed Community Showcase featured Yonsei University’s GPU-accelerated private 5G testbed,...',
+          description: "",
+          section: "News",},{id: "news-invited-to-serve-on-the-technical-program-committee-for-the-molecular-biological-and-multi-scale-communications-mbmc-track-at-ieee-icc-2027",
+          title: 'Invited to serve on the Technical Program Committee for the Molecular, Biological, and...',
           description: "",
           section: "News",},{id: "projects-a-prototype-for-free-space-molecular-communication",
           title: 'A Prototype for Free-Space Molecular Communication',
@@ -91,6 +103,11 @@ ninja.data = [{
           description: "2024",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
+            },},{id: "projects-yonsei-private-5g-amp-ai-ran-testbed",
+          title: 'Yonsei Private 5G &amp;amp; AI-RAN Testbed',
+          description: "2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/yonsei-private-5g/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
